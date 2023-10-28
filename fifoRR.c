@@ -2,7 +2,7 @@
 #include <stdio.h> 
 #define NUM_THREADS 100
 /* Each thread will begin control in this function */ 
-void *runner(void *param)
+void *impressao(void *param)
 { 	
 	for(int i=0; i<100000; i++){
 		printf("\n banda larga");
@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
       fprintf(stderr, "Unable to set policy.\n"); 
    /* create the threads */
    for (i = 0; i < NUM_THREADS; i++) 
-      pthread_create(&tid[i],&attr,runner,NULL); 
+      pthread_create(&tid[i],&attr,impressao,NULL); 
    /* now join on each thread */
    for (i = 0; i < NUM_THREADS; i++) 
       pthread_join(tid[i], NULL); 
