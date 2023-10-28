@@ -4,7 +4,7 @@
 /* Each thread will begin control in this function */ 
 void *runner(void *param)
 { 
-   printf("\nentrou na func");
+   printf("\nrunner");
    pthread_exit(0);
 } 
 
